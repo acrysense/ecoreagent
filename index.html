@@ -41,16 +41,16 @@
 					<a href="tel:+74951654565" class="header__link">+7 (495) 165 45 65</a>
 					<a href="#" class="header__btn btn btn--sm btn--border-grey">Заказать звонок</a>
 					<div class="header__controls">
-						<button class="header__control">
+						<a href="favorites.html" class="header__control" aria-label="Избранное">
 							<svg>
 								<use xlink:href="img/sprite.svg#icon-like"></use>
 							</svg>
-						</button>
-						<button class="header__control">
+						</a>
+						<a href="search-results.html" class="header__control" aria-label="Поиск">
 							<svg>
 								<use xlink:href="img/sprite.svg#icon-search"></use>
 							</svg>
-						</button>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -59,7 +59,7 @@
 		<!-- content -->
 		<div class="wrapper__content">
 			<!-- main -->
-			<section class="main section-indent-first" id="main">
+			<section class="main" id="main">
 				<div class="container">
 					<div class="main__wrap">
 						<div class="main__left">
@@ -129,7 +129,7 @@
 					<div class="about-cooperation about__cooperation">
 						<div class="about-cooperation__wrapper" style="background-image: url(img/about-cooperation-bg.jpg);">
 							<picture class="about-cooperation__img">
-								<img src="img/about-cooperation-img.jpg" alt="Image">
+								<img src="img/about-cooperation-01.jpg" alt="Image">
 							</picture>
 							<div class="about-cooperation__body">
 								<h3 class="about-cooperation__title">
@@ -138,7 +138,7 @@
 									вы получаете:
 								</h3>
 								<ul class="about-cooperation__list">
-									<li class="about-cooperation__list-item">Гарантию долгосрочных отношений и уверенность в качестве реагентов.</li>
+									<li class="about-cooperation__list-item">Гарантию долгосрочных отношений и&nbsp;уверенность в качестве реагентов.</li>
 									<li class="about-cooperation__list-item">Скидки при заказе водоочистного оборудования, если хотите модернизировать комплекс или заказать новое оборудование.</li>
 									<li class="about-cooperation__list-item">Скидки на сервисное, техническое, эксплуатационное обслуживание <br>и аудит.</li>
 								</ul>
@@ -551,7 +551,43 @@
 	<!-- end of wrapper -->
 	<!-- menu -->
 	<div class="menu" id="menu">
-		<div class="menu__wrap"></div>
+		<div class="menu__wrap">
+			<nav class="nav menu__nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="catalog.html" class="nav__link">Каталог</a>
+					</li>
+					<li class="nav__item">
+						<a href="about.html" class="nav__link">О компании</a>
+					</li>
+					<li class="nav__item">
+						<a href="documentation.html" class="nav__link">Документация</a>
+					</li>
+					<li class="nav__item">
+						<a href="news.html" class="nav__link">Новости</a>
+					</li>
+					<li class="nav__item">
+						<a href="contacts.html" class="nav__link">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="menu__bottom">
+				<a href="tel:+74951654565" class="menu__link">+7 (495) 165 45 65</a>
+				<a href="#" class="menu__btn btn btn--sm btn--border-grey">Заказать звонок</a>
+				<div class="menu__controls">
+					<a href="favorites.html" class="menu__control" aria-label="Избранное">
+						<svg>
+							<use xlink:href="img/sprite.svg#icon-like"></use>
+						</svg>
+					</a>
+					<a href="search-results.html" class="menu__control" aria-label="Поиск">
+						<svg>
+							<use xlink:href="img/sprite.svg#icon-search"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- end of menu -->
 	<!-- scripts -->
