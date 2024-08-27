@@ -4124,7 +4124,45 @@ svg {
 }
 
 .partners__wrapper {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -37px;
+  margin-bottom: -43px;
+}
+@media screen and (max-width: 767px) {
+  .partners__wrapper {
+    margin-right: -25px;
+    margin-bottom: -19px;
+  }
+}
+.partners__img {
+  display: block;
+  margin-right: 37px;
+  margin-bottom: 43px;
+  overflow: hidden;
+  -webkit-filter: invert(88%) sepia(0%) saturate(0%) hue-rotate(201deg) brightness(90%) contrast(79%);
+          filter: invert(88%) sepia(0%) saturate(0%) hue-rotate(201deg) brightness(90%) contrast(79%);
+}
+.partners__img img {
+  display: block;
+  max-height: 98px;
+  width: auto;
+  height: auto;
+  opacity: 0.5;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 767px) {
+  .partners__img {
+    margin-right: 25px;
+    margin-bottom: 19px;
+  }
+  .partners__img img {
+    max-height: 65px;
+  }
 }
 
 .reviews__slider {
