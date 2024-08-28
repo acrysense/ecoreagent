@@ -39,12 +39,13 @@
 						<img src="img/logotype.svg" width="148" height="56" alt="ЭКО РЕАГЕНТ">
 					</a>
 					<a href="tel:+74951654565" class="header__link">+7 (495) 165 45 65</a>
-					<a href="#" class="header__btn btn btn--sm btn--border-grey">Заказать звонок</a>
+					<a href="#" class="header__btn btn btn--sm btn--border-grey modal-btn" data-id="modal-application">Заказать звонок</a>
 					<div class="header__controls">
 						<a href="favorites.html" class="header__control" aria-label="Избранное">
 							<svg>
 								<use xlink:href="img/sprite.svg#icon-like"></use>
 							</svg>
+							<span>4</span>
 						</a>
 						<a href="search-results.html" class="header__control" aria-label="Поиск">
 							<svg>
@@ -150,12 +151,13 @@
 			</nav>
 			<div class="menu__bottom">
 				<a href="tel:+74951654565" class="menu__link">+7 (495) 165 45 65</a>
-				<a href="#" class="menu__btn btn btn--sm btn--border-grey">Заказать звонок</a>
+				<a href="#" class="menu__btn btn btn--sm btn--border-grey modal-btn" data-id="modal-application">Заказать звонок</a>
 				<div class="menu__controls">
 					<a href="favorites.html" class="menu__control" aria-label="Избранное">
 						<svg>
 							<use xlink:href="img/sprite.svg#icon-like"></use>
 						</svg>
+						<span>4</span>
 					</a>
 					<a href="search-results.html" class="menu__control" aria-label="Поиск">
 						<svg>
@@ -167,6 +169,52 @@
 		</div>
 	</div>
 	<!-- end of menu -->
+	<!-- modals -->
+	<div class="modal" id="modal-application">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<button class="modal__close" aria-label="Закрыть">
+					<svg>
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+				<div class="modal__top">
+					<h3 class="modal__heading">Оставьте заявку</h3>
+					<p class="modal__description">И в ближайшее время мы перезвоним вам</p>
+				</div>
+				<form action="#" class="modal-form modal__form">
+					<div class="input-field modal-form__input">
+						<div class="input-field__inner">
+							<input type="text" class="input-field__input" placeholder="Имя">
+						</div>
+					</div>
+					<div class="input-field modal-form__input">
+						<div class="input-field__inner">
+							<input type="tel" class="input-field__input" placeholder="Номер телефона" data-inputmask="'mask': '+7 (999) 999-99-99'">
+						</div>
+					</div>
+					<!-- <button class="modal-form__btn btn">Оставить заявку</button> -->
+					<button class="modal-form__btn btn modal-btn" data-id="modal-thanks">Оставить заявку</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal-thanks">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<button class="modal__close" aria-label="Закрыть">
+					<svg>
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+				<div class="modal__message">
+					<h3 class="modal__heading">Спасибо</h3>
+					<p class="modal__description">Ваша заявка успешно отправлена</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end of modals -->
 	<!-- scripts -->
 	<script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
