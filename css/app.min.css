@@ -3141,9 +3141,9 @@ svg {
   left: calc(50% - 33px);
   bottom: -178px;
   z-index: 2;
-  -webkit-transform: translate(calc(-50% - 20px), 0) rotate(37deg);
-      -ms-transform: translate(calc(-50% - 20px), 0) rotate(37deg);
-          transform: translate(calc(-50% - 20px), 0) rotate(37deg);
+  -webkit-transform: translate(-50%, 0) rotate(37deg);
+      -ms-transform: translate(-50%, 0) rotate(37deg);
+          transform: translate(-50%, 0) rotate(37deg);
   display: block;
   width: 498px;
   height: 418px;
