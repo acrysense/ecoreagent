@@ -738,6 +738,9 @@ svg {
 .footer--indent-sm {
   margin-top: 22px;
 }
+.footer--no-indent {
+  margin-top: 0;
+}
 @media screen and (max-width: 767px) {
   .footer {
     margin-top: 21px;
@@ -746,6 +749,9 @@ svg {
   .footer--indent-sm {
     margin-top: 10px;
     margin-bottom: 16px;
+  }
+  .footer--no-indent {
+    margin-top: 0;
   }
 }
 .footer__wrapper {
@@ -845,6 +851,7 @@ svg {
 .footer__btn {
   margin-top: 32px;
   min-width: 190px;
+  border-width: 2px;
 }
 @media screen and (max-width: 1023px) {
   .footer__btn {
@@ -1892,6 +1899,7 @@ svg {
     min-width: 368px;
   }
   .about__wrapper--wide .about__right {
+    padding-top: 13px;
     max-width: calc(100% - 368px - 40px);
   }
 }
@@ -1952,9 +1960,22 @@ svg {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -1px;
+  background: linear-gradient(89deg, #031C2E 1.16%, #214E6E 76.08%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .about__title span {
   color: #E3000B;
+  background: none;
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: currentcolor;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .about__title {
+    font-size: 40px;
+  }
 }
 @media screen and (max-width: 767px) {
   .about__title {
@@ -2088,8 +2109,8 @@ svg {
     display: block;
     width: 100%;
     height: 100%;
-    background: -webkit-gradient(linear, left top, right top, color-stop(32.59%, rgba(0, 0, 0, 0)), color-stop(83.01%, rgba(0, 0, 0, 0.5)));
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 32.59%, rgba(0, 0, 0, 0.5) 83.01%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(32.59%, rgba(0, 0, 0, 0)), color-stop(83.01%, rgba(0, 0, 0, 0.7)));
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 32.59%, rgba(0, 0, 0, 0.7) 83.01%);
   }
   .about-cooperation__wrapper--dark .about-cooperation__title {
     color: #FFFFFF;
@@ -2150,6 +2171,7 @@ svg {
     overflow: hidden;
     margin-left: 0;
     max-width: none;
+    background: #EDF9FF;
   }
   .about-cooperation__body::before {
     content: "";
@@ -2196,6 +2218,11 @@ svg {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 1023px) {
+  .about-cooperation__title br {
+    display: none;
+  }
 }
 @media screen and (max-width: 767px) {
   .about-cooperation__title {
@@ -2967,23 +2994,6 @@ svg {
     -webkit-filter: blur(4.5px);
             filter: blur(4.5px);
   }
-  .cooperation__wrapper:not(.cooperation__wrapper--red)::after {
-    content: "";
-    position: absolute;
-    left: calc(50% - 33px);
-    bottom: -178px;
-    z-index: 2;
-    -webkit-transform: translate(-50%, 0) rotate(37deg);
-        -ms-transform: translate(-50%, 0) rotate(37deg);
-            transform: translate(-50%, 0) rotate(37deg);
-    display: block;
-    width: 498px;
-    height: 418px;
-    background-image: url(../img/decor-circles-02.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-  }
 }
 @media screen and (max-width: 1023px) {
   .cooperation__wrapper {
@@ -3124,6 +3134,30 @@ svg {
   .cooperation__img {
     height: 236px;
     border-radius: 30px;
+  }
+}
+.cooperation__decor {
+  position: absolute;
+  left: calc(50% - 33px);
+  bottom: -178px;
+  z-index: 2;
+  -webkit-transform: translate(calc(-50% - 20px), 0) rotate(37deg);
+      -ms-transform: translate(calc(-50% - 20px), 0) rotate(37deg);
+          transform: translate(calc(-50% - 20px), 0) rotate(37deg);
+  display: block;
+  width: 498px;
+  height: 418px;
+}
+.cooperation__decor img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 1023px) {
+  .cooperation__decor {
+    display: none;
   }
 }
 
@@ -3484,7 +3518,7 @@ svg {
           justify-content: space-between;
   margin-bottom: 44px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .catalog__top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3507,7 +3541,7 @@ svg {
   text-transform: uppercase;
   color: #C0C0C0;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .catalog__heading {
     display: none;
   }
@@ -3522,9 +3556,13 @@ svg {
   line-height: 1.3333333333;
   color: #2F4656;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .catalog__description {
     max-width: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .catalog__description {
     font-size: 14px;
     line-height: 1.4285714286;
   }
@@ -4298,7 +4336,7 @@ svg {
 @media screen and (max-width: 767px) {
   .product-banner__title {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
     line-height: 1.3333333333;
     letter-spacing: normal;
   }
@@ -4987,13 +5025,32 @@ svg {
   }
 }
 
-.not-found {
-  padding-top: 39px;
+.not-found__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 39px 0;
+  min-height: calc(100svh - 145px - 332px);
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .not-found__wrap {
+    min-height: calc(100svh - 92px - 702px);
+  }
 }
 @media screen and (max-width: 767px) {
-  .not-found {
-    padding-top: 25px;
-    padding-bottom: 59px;
+  .not-found__wrap {
+    padding: 25px 0 59px;
+    min-height: calc(100svh - 92px - 650px);
   }
 }
 .not-found__heading {
